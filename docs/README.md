@@ -53,7 +53,7 @@ Explicar brevemente como se espera desarrollar el trabajo de implementación.
 
 ### 2.1 Instalación
 
-Describir brevemente las librerías utilizadas para la instalación y programas utilizados para la ejecución del código. (Agregar una sección de anexo para describir como fueron instaladas las librerías de OpenCV y la IDE utilzada para el trabajo)
+En el trabajo usamos openCv y visual studio code , todo esto nos fue muy facil de obtener debido a que el ayudante de la asignatura nos brindo tutoriales de como instalar la ide y sus respectivas librerias
 
 ### 2.2 Diseño 
 
