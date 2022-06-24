@@ -100,7 +100,10 @@ La primera linea carga el archivo de entrenamiento... etc
 Indicar los libros, páginas web, documentos, etc. Utilizados en el trabajo. Por ejemplo:
 
 [1] Adrian Rosebrock. OpenCV People Counter. https://pyimagesearch.com/2018/08/13/
-opencv-people-counter/.
+opencv-people-counter/
+
 [2] Darkcrizt OpenCV una biblioteca para el reconocimiento de objetos en imágenes y cámaras https://blog.desdelinux.net/opencv-una-biblioteca-para-el-reconocimiento-de-objetos-en-imagenes-y-camaras/
+
 [3] Gabriela Solano DETECCIÓN DE MOVIMIENTO (Con sustracción de imágenes) – OpenCV y Python https://omes-va.com/deteccion-de-movimiento-con-sustraccion-de-imagenes-opencv-y-python/#google_vignette
+
 
