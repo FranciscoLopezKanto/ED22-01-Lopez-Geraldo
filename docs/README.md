@@ -121,7 +121,7 @@ El detector de caras utilizado fue xxx. Para utilizarlo se debe.... El código p
 ```
 
 ## 3. Resultados obtenidos
-![UCN](https://postimg.cc/hXqDDxMh)
+![UCN](https://i.postimg.cc/zGyVkFgw/imagen-2022-06-24-161838670.png)
 ## 4. Conclusiones
 < Nuestro avances estan dirigiendose de forma positiva a nuestra meta propuesta y nuestro codigo esta llegando 
 
