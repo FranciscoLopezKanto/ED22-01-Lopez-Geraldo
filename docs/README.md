@@ -11,6 +11,11 @@
 * Felipe Geraldo (Programador)
 * Francisco Lopez (Programador)
 
+## Resumen 
+
+> La problemática que se nos planteó en este proyecto fue la detección de personas en secuencias de imágenes o video la cual como grupo abordamos de la manera más cómoda posible en cuanto a distribución de tiempos en cuanto a nuestra disponibilidad, para así lograr mayor eficiencia y eficacia en el trabajo. Logramos llegar a plasmar una idea de solución para posteriormente desarrollarla hasta obtener un resultado de nuestro agrado, todo esto apoyado desde las ayudantías brindadas por nuestro profesor y ayudante a cargo, las cuales nos ayudaron en cuanto a conocimientos que no teníamos respecto a este tipo de problemas. Posteriormente fuimos capaces de finiquitar las últimas partes de la primera parte de nuestro proyecto. Durante la realización del mismo informe como grupo nos retroalimentamos con todo el conocimiento que pasamos desapercibido, a grandes rasgos tenemos avances positivos lo cual nos favorece para finiquitar este proyecto.
+
+
 ## 1. Introducción
 
 Actualmente en el mundo de la Informática se están realizando grandes avances en el tratamiento de imágenes y de la inteligencia artificial. Algo común para nosotros como lo es la detección y el poder contabilizar personas que están entrando y saliendo de un lugar solo dedicando un poco de atención.
