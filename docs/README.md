@@ -13,19 +13,21 @@
 
 ## Resumen 
 
-> La problemática que se nos planteó en este proyecto fue la detección y Re identificación de caras en secuencias de imágenes o video la cual como grupo abordamos de la manera más cómoda posible en cuanto a distribución de tiempos en cuanto a nuestra disponibilidad, para así lograr mayor eficiencia y eficacia en el trabajo. Logramos llegar a plasmar una idea de solución para posteriormente desarrollarla hasta obtener un resultado de nuestro agrado, todo esto apoyado desde las ayudantías brindadas por nuestro profesor y ayudante a cargo, las cuales nos ayudaron en cuanto a conocimientos que no teníamos respecto a este tipo de problemas. Posteriormente fuimos capaces de finiquitar las últimas partes de la primera parte de nuestro proyecto. Durante la realización del mismo informe como grupo nos retroalimentamos con todo el conocimiento que pasamos desapercibido, a grandes rasgos tenemos avances positivos lo cual nos favorece para finiquitar este proyecto.>
+> La problemática que se nos planteó en este proyecto fue la detección y Re identificación de caras en secuencias de imágenes o video la cual como grupo abordamos de la manera más cómoda posible en cuanto a distribución de tiempos en cuanto a nuestra disponibilidad, para así lograr mayor eficiencia y eficacia en el trabajo. Logramos llegar a plasmar una idea de solución para posteriormente desarrollarla hasta obtener un resultado de nuestro agrado, todo esto apoyado desde las ayudantías brindadas por nuestro profesor y ayudante a cargo, las cuales nos ayudaron en cuanto a conocimientos que no teníamos respecto a este tipo de problemas. Posteriormente fuimos capaces de finiquitar las últimas partes de la primera parte de nuestro proyecto. Durante la realización del mismo informe como grupo nos retroalimentamos con todo el conocimiento que pasamos desapercibido, a grandes rasgos tenemos avances positivos lo cual nos favorece para finiquitar este proyecto.
 
 ## 1. Introducción
 
-La primera función de un reporte técnico es plasmar la información necesaria para que otras personas puedan reproducir el sistema propuesto o puedan entender su fucnionamiento . Para cumplir anterior se debe diferenciar claramente entre los artefactos de diseño e implementación. En el caso de un desarrollo tecnológico los algoritmos son importantes como componente de diseño y los programas generalmente son irrelevantes y deben resumidos o agregados en anexos en el documento. Los programas no son importantes en el documento, salvo si se quiere explicar conceptos expecíficos del lenguaje o del algoritmo implementado.
+Actualmente en el mundo de la Informática se están realizando grandes avances en el tratamiento de imágenes y de la inteligencia artificial. Algo común para nosotros como lo es la detección y el poder contabilizar personas que están entrando y saliendo de un lugar solo dedicando un poco de atención.
 
-La redacción debe ser formal y de modo impersonal. No se debe utlizar primera persona del singular o plural. Se debe evitar el uso de cualquier calificativo sustituyéndolo siempre utilizando datos concretos y rastreables en documentos o publicaciones a través de referencias bibliográficas. Por ejemplo, no calificar algo como: "muy importante", "sustancial", "muy usadoo" o "mucho mejor".
+La dificultad que nos conlleva es si una misma persona vuelve al lugar  y no sea contada dos veces, pero todo esto es más complicado de realizar mediante un ordenador . Este no tiene la capacidad de distinguir por sí mismo los objetos que no son útiles para nuestros requerimientos así mismo una cámara de última generación puede llegar a ver el mundo como nosotros pero no interpretarlo como nosotros. Siguiendo esta línea , este proyecto se basa en la detección de una persona y lograr un reconocimiento de esta, para darnos el análisis de estos datos obtenidos. 
 
-Las comparaciones deben concretarse con hechos y datos, sin frases ambiguas o términos generales. Por ejemplo, nunca se debe redactar frases como "el método es mejor que el método B". Lo correcto es decir, el error promedio de el método A es de 5 %, correspondiendo a la mitad del error de 10% obtenido utilizando el método B". El tiempo verbal es usualmente presente. No se debe perder de vista que se está explicando ”como hacer algo”, en vez de ”qué se hizo”. Todo aspecto circunstancial es irrelevante para el documento. Por ejemplo, si se ha desarrollado en el laboratorio X, o en el curso Y, con el profesor Z, etc.
+Palabras clave: Informatica, reconocimiento, Detección, Ordenador
+
 
 ### 1.1 Descripción del problema
 
-Dado el laboratorio describir como se entiende el problema bajo sus propias palabras.
+La detección de personas dentro de una imagen y el poder usar los datos del análisis de esta misma.
+
 
 ### 1.2 Objetivos 
 
@@ -35,18 +37,11 @@ El fin que se desea llegar. (Comenzar con un verbo: "Construir un sistema...", "
 
 **Objetivos específicos**
 
-1. Objetivo 1
-2. Objetivo 2
-3. Objetivos 3
+1. Capturar la escena en la que encontramos las personas a identificar, mediante el los algoritmos
+2. Procesar la imagen para quedarnos únicamente con los datos útiles. En este paso evitaremos errores de conteo en el caso que la misma persona ingrese o se retire en    múltiples ocasiones .
+3. Implementar la estructura de datos mediante listas enlazadas.
+4. Realizar e implementar una interfaz gráfica que muestre los resultados del conteo de personas
 
-Los objetivos específicos son acciones específicas que son desarrolladas para lograr cumplir el objetivo general, por ejemplo:
-
-1. Investigar  el  estado  del  arte  de  visión  por  computador  y  audio  para  resolver  tareas de  clasificación unimodal y multimodal aplicado  al  problema  de  reconocimiento  de emociones.
-2.  Seleccionar  uno  o  dos  métodos  estudiados  en  el  estado  del  arte  para  la  estimación  de  laemoción utilizando datos unimodales o multimodales.
-3.  Implementar los métodos seleccionados utilizando el lenguaje de programación Python y laslibrerías suministradas por Pytorch.
-4.  Validar  los  resultados  por  medio  bases  de  datos  especializadas  para  el  desarrollo  deaplicaciones basadas en la estimación de la emoción y que incluyan varios modos de atributoscomo: imágenes, sonido y/o texto.
-5.  Proponer  mejoras  a  los  modelos  implementados  para  mejorar  su  desempeño  en  futurasimplementaciones o proyectos de investigación.
-6.  Difundir los resultados en medios científicos nacionales o internacionales.
 
 ### 1.3 Solución propuesta
 
@@ -97,14 +92,15 @@ La primera linea carga el archivo de entrenamiento... etc
 # Anexos
 
 ## Anexo A: Instalación librerías OpenCV
-
+[UCN] https://drive.google.com/file/d/136fquVeP-fY-pYgR3kPt6iioiovlodrn/view?usp=sharing
 ## Anexo B: Instalación de IDE y configuración librerías OpenCV
-
+[UCN] https://www.youtube.com/watch?v=Hu7ArOaFm2g
 # Referecia
 
 Indicar los libros, páginas web, documentos, etc. Utilizados en el trabajo. Por ejemplo:
 
-1. MONTERO, J.,Metodos matemáticos aplicados a la ganadería.3aed. Sevilla: Ediciones de la pradera,2007.
-2. LVARADO,   J.   P.,¿Qué   debe   contener   un   artículo   científico?.http://www.ie.tec.ac.cr/palvarado/pmwiki/index.php/MSc/Art\%c3\%adculoCient\%c3\%adfico. Fe-cha de acceso:13/Nov/2018
-
+[1] Adrian Rosebrock. OpenCV People Counter. https://pyimagesearch.com/2018/08/13/
+opencv-people-counter/.
+[2] Darkcrizt OpenCV una biblioteca para el reconocimiento de objetos en imágenes y cámaras https://blog.desdelinux.net/opencv-una-biblioteca-para-el-reconocimiento-de-objetos-en-imagenes-y-camaras/
+[3] Gabriela Solano DETECCIÓN DE MOVIMIENTO (Con sustracción de imágenes) – OpenCV y Python https://omes-va.com/deteccion-de-movimiento-con-sustraccion-de-imagenes-opencv-y-python/#google_vignette
 
