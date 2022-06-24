@@ -92,9 +92,9 @@ La primera linea carga el archivo de entrenamiento... etc
 # Anexos
 
 ## Anexo A: Instalación librerías OpenCV
-[UCN] https://drive.google.com/file/d/136fquVeP-fY-pYgR3kPt6iioiovlodrn/view?usp=sharing
+   [*] https://drive.google.com/file/d/136fquVeP-fY-pYgR3kPt6iioiovlodrn/view?usp=sharing
 ## Anexo B: Instalación de IDE y configuración librerías OpenCV
-[UCN] https://www.youtube.com/watch?v=Hu7ArOaFm2g
+   [*] https://www.youtube.com/watch?v=Hu7ArOaFm2g
 # Referecia
 
 Indicar los libros, páginas web, documentos, etc. Utilizados en el trabajo. Por ejemplo:
