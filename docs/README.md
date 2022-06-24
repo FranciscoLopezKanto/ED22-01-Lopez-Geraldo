@@ -26,18 +26,24 @@ Palabras clave: Informatica, reconocimiento, Detección, Ordenador
 
 ### 1.1 Descripción del problema
 
-La detección de personas dentro de una imagen y el poder usar los datos del análisis de esta misma.
+La empresa ACME desea construir un sistema de vigilancia para contar personas en una zona
+determinada de un edificio. Para ello cuenta con dispositivo de adquisici´on, una c´amara o un video,
+el cual puede detectar diferentes personas
 
+La detección de personas dentro de una imagen y el poder usar los datos del análisis de esta misma.
 
 ### 1.2 Objetivos 
 
 **Objetivo General**
 
-El fin que se desea llegar. (Comenzar con un verbo: "Construir un sistema...", "Desarrollar un sistema...", etc)
+Construir un sistema de vigilancia para contar personas en una zona determinada con el objetivo de contar todas las personas
+que entran y salen dentro de una zona previamente determinada. Además, deberá contar cuantas
+personas distintas han entrado o salido de la zona. También, se pide listar las identidades que más
+han aparecido en el video tanto en la entrada como en la salida.
 
 **Objetivos específicos**
 
-1. Capturar la escena en la que encontramos las personas a identificar, mediante el los algoritmos
+1. Capturar la escena en la que encontramos las personas a identificar, mediante algoritmo de HOG y conteo de pixeles
 2. Procesar la imagen para quedarnos únicamente con los datos útiles. En este paso evitaremos errores de conteo en el caso que la misma persona ingrese o se retire en    múltiples ocasiones .
 3. Implementar la estructura de datos mediante listas enlazadas.
 4. Realizar e implementar una interfaz gráfica que muestre los resultados del conteo de personas
@@ -49,11 +55,11 @@ Esbozo de la solución propuesta, se espera que esta vaya evolucionando a medida
 
 ## 2. Materiales y métodos
 
-Explicar brevemente como se espera desarrollar el trabajo de implementación.
+Nosotros nos apoyamos con el materia dado por nuestro profesor Juan Bekios y algunos tutoriales de deteccion cualquiera, ya sea, objeto, persona, vehiculos, etc...
 
 ### 2.1 Instalación
 
-En el trabajo usamos OpenCv y visual studio code , todo esto nos fue muy facil de obtener debido a que el ayudante de la asignatura nos brindo tutoriales de como instalar la ide y sus respectivas librerias
+En el trabajo usamos OpenCv y Visual Studio Code , todo esto nos fue muy facil de obtener debido a que el ayudante de la asignatura nos brindo tutoriales de como instalar la IDE y sus respectivas librerias
 
 ### 2.2 Diseño 
 
@@ -61,11 +67,7 @@ Explicar los componentes (módulos o clases) utilizados para resolver el problem
 
 ### 2.3 Implementación
 
-Explicar brevemente algunos aspectos de implementación: Por ejemplo, detector de caras utilizado. Se pueden realizar pequeñas reseñas al código para indicar elementos importantes en el trabajo.
-
-Por ejemplo, 
-
-#### Detector de caras
+#### Detector de personas
 
 El detector de personas utilizado fue mediante la implementacion HOG. Funciona tal que asi:
 ```c++
@@ -155,7 +157,7 @@ De acuerdo a lo visto en lo implementado del codigo se pudo obtener una imagen t
 
 ![UCN](https://i.postimg.cc/zGyVkFgw/imagen-2022-06-24-161838670.png)
 ## 4. Conclusiones
-< Nuestro avances estan dirigiendose de una forma un poco a nuestra meta propuesta pero se esta aprendiendo sobre la marcha el funcionamiento con la
+< Nuestro avances estan dirigiendose de una forma un poco lenta a nuestra meta propuesta pero se esta aprendiendo sobre la marcha el funcionamiento con la
 libreria OpenCv en C++.
 
 # Anexos
@@ -164,12 +166,11 @@ libreria OpenCv en C++.
    [*] https://drive.google.com/file/d/136fquVeP-fY-pYgR3kPt6iioiovlodrn/view?usp=sharing
 ## Anexo B: Instalación de IDE y configuración librerías OpenCV
    [*] https://www.youtube.com/watch?v=Hu7ArOaFm2g
-# Referecia
+# Referecias
 
 Indicar los libros, páginas web, documentos, etc. Utilizados en el trabajo. Por ejemplo:
 
-[1] Adrian Rosebrock. OpenCV People Counter. https://pyimagesearch.com/2018/08/13/
-opencv-people-counter/.
+[1] Pedro Orellana. OpenCV Car Counter. https://github.com/pedroorellana/simple-car-counting/blob/master/main.cpp
 [2] Darkcrizt OpenCV una biblioteca para el reconocimiento de objetos en imágenes y cámaras https://blog.desdelinux.net/opencv-una-biblioteca-para-el-reconocimiento-de-objetos-en-imagenes-y-camaras/
 [3] Gabriela Solano DETECCIÓN DE MOVIMIENTO (Con sustracción de imágenes) – OpenCV y Python https://omes-va.com/deteccion-de-movimiento-con-sustraccion-de-imagenes-opencv-y-python/#google_vignette
 
