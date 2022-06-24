@@ -1,4 +1,4 @@
-![UCN](docs/images/60x60-ucn-negro.png)
+![UCN](https://i.postimg.cc/KYxJMwds/Isologo-UCN-2018.png)
 
 
 # Proyecto: Detección y reidentificación de caras en secuencias de imágenes o video
