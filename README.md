@@ -7,24 +7,8 @@
 ### Integrantes
 
 *Felipe Geraldo (Programador)
+
 *Francisco Lopez (Programador)
-
-
-Bitácora
-Ver Bitácora
-
-Resumen
-
-
-
-
-Documentos
-Reporte Técnico
-
-
-
-
-
 
 ### Bitácora
 
