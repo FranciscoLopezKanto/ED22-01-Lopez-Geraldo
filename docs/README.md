@@ -65,9 +65,33 @@ Explicar brevemente algunos aspectos de implementación: Por ejemplo, detector d
 
 Por ejemplo, 
 
-#### Detector de caras
+#### Detector de personas
 
-El detector de caras utilizado fue xxx. Para utilizarlo se debe.... El código para detectar una cara en una imagen se muestra a continuación:
+El detector de personas utilizado fue deteccion mediante hog multiescalado. Para utilizarlo se debe....	 El código para detectar una persona en una imagen se muestra a continuación:
+```c++
+vector<Persona> Detector::detect(InputArray img){
+        // Run the detector with default parameters. to get a higher hit-rate
+        // (and more false alarms, respectively), decrease the hitThreshold and
+        // groupThreshold (set groupThreshold to 0 to turn off the grouping completely).
+        vector<Rect> found;
+        if (m == Default)
+            hog.detectMultiScale(img, found, 0, Size(2,2), Size(4,4), 1.05, 2, false);
+        else if (m == Daimler)
+            hog_d.detectMultiScale(img, found, 1, Size(4,4), Size(32,32), 1.01, 3, true);
+
+        // Convertir un objeto Rect a un objeto persona
+        vector<Persona> personas;
+
+        for (vector<Rect>::iterator i = found.begin(); i != found.end(); ++i){
+            Rect &r = *i;
+            Persona p(r);
+            personas.push_back(p);
+        }
+
+        return personas;
+}
+```
+Luego vamos al main y implementamos la funcion en la imagen para hacer el dibujado de los rectangulos y el circulo en el centro de la persona
 
 ```c++
  int main(int argc, char** argv)
@@ -83,23 +107,16 @@ El detector de caras utilizado fue xxx. Para utilizarlo se debe.... El código p
     cout << detector.modeName() << endl;
 
     vector<Persona> found = detector.detect(imagen);
+    //Recorrera la imagen y si lo encuentra empezara a guardar los valores X e Y del comienzo y final
     for (vector<Persona>::iterator i = found.begin(); i != found.end(); ++i)
     {
         Persona &p = *i;
         cout << "(" << p.getXComienzo() << ", " << p.getYComienzo() << ")" << endl;
         //detector.adjustRect(r);
+	//dibujado del rectangulo de acuerdo al inicio y final 
         rectangle(imagen, cv::Point(p.getXComienzo(), p.getYComienzo()), cv::Point(p.getXFin(), p.getYFin()), cv::Scalar(0, 255, 0), 2);
+	//Dibujado del circulo en el centro del cuadrado
         circle(imagen, cv::Point(p.getXCentro(), p.getYCentro()), 3, cv::Scalar(0, 0, 255), 3);
-
-//Contadores:
-        //Si va desde arriba hacia abajo se le suma +1 al contador de entrantes
-        if(p.getYCentro()<200 && p.getYCentro() >210 && p.getXCentro() > 0 && p.getXCentro()<800){
-            cont = cont + 1;
-        }
-        //Si va desde abajo hacia arriba se le suma +1 al contador de salientes
-        if(p.getYCentro()>200 && p.getYCentro() <190 && p.getXCentro()> 0 && p.getXCentro() <800){
-            cont2 +=1;
-        }
     }   
     //redimensionamos la imagen para que siempre sea 800x400 y asi facilitar el dibujado de la linea
     resize(imagen,imagen,Size(800,400));
@@ -115,11 +132,11 @@ El detector de caras utilizado fue xxx. Para utilizarlo se debe.... El código p
     imshow("People detector", imagen);
     waitKey(0);
     
-    
     return 0;
 }
 ```
-La primera linea carga el archivo de entrenamiento... etc
+Para asi lograr una Imagen tal que asi:
+
 
 ## 3. Resultados obtenidos
 
