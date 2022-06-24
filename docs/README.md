@@ -53,7 +53,7 @@ Explicar brevemente como se espera desarrollar el trabajo de implementación.
 
 ### 2.1 Instalación
 
-En el trabajo usamos openCv y visual studio code , todo esto nos fue muy facil de obtener debido a que el ayudante de la asignatura nos brindo tutoriales de como instalar la ide y sus respectivas librerias
+En el trabajo usamos OpenCv y visual studio code , todo esto nos fue muy facil de obtener debido a que el ayudante de la asignatura nos brindo tutoriales de como instalar la ide y sus respectivas librerias
 
 ### 2.2 Diseño 
 
@@ -67,7 +67,34 @@ Por ejemplo,
 
 #### Detector de caras
 
-El detector de caras utilizado fue xxx. Para utilizarlo se debe.... El código para detectar una cara en una imagen se muestra a continuación:
+El detector de personas utilizado fue mediante la implementacion HOG. Funciona tal que asi:
+```c++
+
+
+vector<Persona> Detector::detect(InputArray img){
+        // Run the detector with default parameters. to get a higher hit-rate
+        // (and more false alarms, respectively), decrease the hitThreshold and
+        // groupThreshold (set groupThreshold to 0 to turn off the grouping completely).
+        vector<Rect> found;
+        if (m == Default)
+            hog.detectMultiScale(img, found, 0, Size(2,2), Size(4,4), 1.05, 2, false);
+        else if (m == Daimler)
+            hog_d.detectMultiScale(img, found, 1, Size(4,4), Size(32,32), 1.01, 3, true);
+
+        // Convertir un objeto Rect a un objeto persona
+        vector<Persona> personas;
+
+        for (vector<Rect>::iterator i = found.begin(); i != found.end(); ++i){
+            Rect &r = *i;
+            Persona p(r);
+            personas.push_back(p);
+        }
+
+        return personas;
+}
+
+```
+El código para detectar una persona en una imagen se muestra a continuación:
 
 ```c++
  int main(int argc, char** argv)
@@ -79,10 +106,15 @@ El detector de caras utilizado fue xxx. Para utilizarlo se debe.... El código p
     int cont2 = 0;
    
     imagen = imread("/Users/felog/Desktop/opencvtest/images/image1679.png");
+    //redimensionamos la imagen para que siempre sea 800x400 y asi facilitar el dibujado de la linea
+    resize(imagen,imagen,Size(800,400));
     detector.toggleMode();
     cout << detector.modeName() << endl;
-
+    //Implementamos la funcion para hacer que detecte lo mas posible a una persona y se asigna a found.
     vector<Persona> found = detector.detect(imagen);
+    
+    //Se recorre la imagen pixel por pixel y asi ir guardando los pixeles en las funciones "get" y con eso definir las medidas de 
+    los rectangulos y centroides.
     for (vector<Persona>::iterator i = found.begin(); i != found.end(); ++i)
     {
         Persona &p = *i;
@@ -101,8 +133,6 @@ El detector de caras utilizado fue xxx. Para utilizarlo se debe.... El código p
             cont2 +=1;
         }
     }   
-    //redimensionamos la imagen para que siempre sea 800x400 y asi facilitar el dibujado de la linea
-    resize(imagen,imagen,Size(800,400));
     //Texto que muestra el contador de personas entrantes y salientes
     char str[200];
         sprintf_s(str, "Total de entradas:" "%i",cont);
@@ -125,7 +155,8 @@ De acuerdo a lo visto en lo implementado del codigo se pudo obtener una imagen t
 
 ![UCN](https://i.postimg.cc/zGyVkFgw/imagen-2022-06-24-161838670.png)
 ## 4. Conclusiones
-< Nuestro avances estan dirigiendose de forma positiva a nuestra meta propuesta y nuestro codigo esta llegando 
+< Nuestro avances estan dirigiendose de una forma un poco a nuestra meta propuesta pero se esta aprendiendo sobre la marcha el funcionamiento con la
+libreria OpenCv en C++.
 
 # Anexos
 
