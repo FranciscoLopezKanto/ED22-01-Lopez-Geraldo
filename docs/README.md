@@ -1,4 +1,4 @@
-![UCN](images/60x60-ucn-negro.png)
+![UCN](https://i.postimg.cc/KYxJMwds/Isologo-UCN-2018.png)
 
 
 # Informe Técnico 
@@ -7,14 +7,13 @@
 
 **Alumnos:**
 
-* Alumno 01 (Rol)
-* Alumno 02 (Rol)
+
+* Felipe Geraldo (Programador)
+* Francisco Lopez (Programador)
 
 ## Resumen 
 
-> Agregar un resumen que describa el trabajo realizado y sus resultados. (Entre 150 y 180 palabras)
-> Más cosas...
-> El resumen indicarlo como cita con el comando `>`
+> La problemática que se nos planteó en este proyecto fue la detección y Re identificación de caras en secuencias de imágenes o video la cual como grupo abordamos de la manera más cómoda posible en cuanto a distribución de tiempos en cuanto a nuestra disponibilidad, para así lograr mayor eficiencia y eficacia en el trabajo. Logramos llegar a plasmar una idea de solución para posteriormente desarrollarla hasta obtener un resultado de nuestro agrado, todo esto apoyado desde las ayudantías brindadas por nuestro profesor y ayudante a cargo, las cuales nos ayudaron en cuanto a conocimientos que no teníamos respecto a este tipo de problemas. Posteriormente fuimos capaces de finiquitar las últimas partes de la primera parte de nuestro proyecto. Durante la realización del mismo informe como grupo nos retroalimentamos con todo el conocimiento que pasamos desapercibido, a grandes rasgos tenemos avances positivos lo cual nos favorece para finiquitar este proyecto.>
 
 ## 1. Introducción
 
