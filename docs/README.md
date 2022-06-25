@@ -52,7 +52,7 @@ han aparecido en el video tanto en la entrada como en la salida.
 
 ### 1.3 Solución propuesta
 
-Esbozo de la solución propuesta, se espera que esta vaya evolucionando a medida que se avanza en el proyecto.
+Un sistema que sea capaz de contabilizar el ingreso y salida de personas en una zona determinada con el objetivo de guardar estos datos y posteriormente inferir las respuesta de cada requqrimiento solicitado.
 
 ## 2. Materiales y métodos
 
@@ -104,45 +104,40 @@ El código para detectar una persona en una imagen se muestra a continuación:
 ```c++
  int main(int argc, char** argv)
 {
-   
+    
     Detector detector;
     Mat imagen;
     int cont = 0;
     int cont2 = 0;
-    Tlista listaE = NULL;
-    Tlista listaS = NULL;
    
     imagen = imread("/Users/felog/Desktop/opencvtest/images/image1679.png");
-   
-    
+    //redimensionamos la imagen para que siempre sea 800x400 y asi facilitar el dibujado de la linea
+    resize(imagen,imagen,Size(800,400));
     detector.toggleMode();
     cout << detector.modeName() << endl;
-    
+    //Implementamos la funcion para hacer que detecte lo mas posible a una persona y se asigna a found.
     vector<Persona> found = detector.detect(imagen);
+    
+    //Se recorre la imagen pixel por pixel y asi ir guardando los pixeles en las funciones "get" y con eso definir las medidas de 
+    los rectangulos y centroides.
     for (vector<Persona>::iterator i = found.begin(); i != found.end(); ++i)
     {
-
         Persona &p = *i;
         cout << "(" << p.getXComienzo() << ", " << p.getYComienzo() << ")" << endl;
         //detector.adjustRect(r);
         rectangle(imagen, cv::Point(p.getXComienzo(), p.getYComienzo()), cv::Point(p.getXFin(), p.getYFin()), cv::Scalar(0, 255, 0), 2);
         circle(imagen, cv::Point(p.getXCentro(), p.getYCentro()), 3, cv::Scalar(0, 0, 255), 3);
 
-//Contador y se agrega a una lista:
+//Contadores:
         //Si va desde arriba hacia abajo se le suma +1 al contador de entrantes
         if(p.getYCentro()<200 && p.getYCentro() >210 && p.getXCentro() > 0 && p.getXCentro()<800){
             cont = cont + 1;
-            insertarInicio(listaE, cont);
         }
         //Si va desde abajo hacia arriba se le suma +1 al contador de salientes
         if(p.getYCentro()>200 && p.getYCentro() <190 && p.getXCentro()> 0 && p.getXCentro() <800){
             cont2 +=1;
-            insertarInicio(listaS, cont2);
         }
     }   
-    //redimensionamos la imagen para que siempre sea 800x400 y asi facilitar el dibujado de la linea
-    resize(imagen,imagen,Size(800,400));
-
     //Texto que muestra el contador de personas entrantes y salientes
     char str[200];
         sprintf_s(str, "Total de entradas:" "%i",cont);
@@ -158,7 +153,6 @@ El código para detectar una persona en una imagen se muestra a continuación:
     
     return 0;
 }
-
 ```
 
 ## 3. Resultados obtenidos
