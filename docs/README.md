@@ -110,6 +110,8 @@ El código para detectar una persona en una imagen se muestra a continuación:
     Mat imagen;
     int cont = 0;
     int cont2 = 0;
+    Tlista listaE = NULL;
+    Tlista listaS = NULL;
    
     imagen = imread("/Users/felog/Desktop/opencvtest/images/image1679.png");
     //redimensionamos la imagen para que siempre sea 800x400 y asi facilitar el dibujado de la linea
@@ -133,10 +135,12 @@ El código para detectar una persona en una imagen se muestra a continuación:
         //Si va desde arriba hacia abajo se le suma +1 al contador de entrantes
         if(p.getYCentro()<200 && p.getYCentro() >210 && p.getXCentro() > 0 && p.getXCentro()<800){
             cont = cont + 1;
+	    insertarInicio(listaE, cont);
         }
         //Si va desde abajo hacia arriba se le suma +1 al contador de salientes
         if(p.getYCentro()>200 && p.getYCentro() <190 && p.getXCentro()> 0 && p.getXCentro() <800){
             cont2 +=1;
+	    insertarInicio(listaS, cont2);
         }
     }   
     //Texto que muestra el contador de personas entrantes y salientes
