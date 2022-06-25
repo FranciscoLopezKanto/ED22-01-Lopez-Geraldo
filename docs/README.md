@@ -64,9 +64,10 @@ En el trabajo usamos OpenCv y Visual Studio Code , todo esto nos fue muy facil d
 
 ### 2.2 Diseño 
 
-[![diagrama.png](https://i.postimg.cc/N0V3VMcS/diagrama.png)](https://postimg.cc/1gG7Vy4r)
+[![diagrama.png](https://i.postimg.cc/nzF33fsg/Untitled-Diagram-drawio.png)
 
-Explicar los componentes (módulos o clases) utilizados para resolver el problema. Indicar arquitectura propuesta, diagrama de clases u otro artefacto que estime conveniente para explicar el diseño de su implimentación.
+Nuestra idea del funcionamiento del programa y sus etapas
+.
 
 ### 2.3 Implementación
 
