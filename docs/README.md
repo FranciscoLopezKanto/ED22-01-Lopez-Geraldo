@@ -28,7 +28,7 @@ Palabras clave: Informatica, reconocimiento, Detección, Ordenador
 ### 1.1 Descripción del problema
 
 La empresa ACME desea construir un sistema de vigilancia para contar personas en una zona
-determinada de un edificio. Para ello cuenta con dispositivo de adquisici´on, una c´amara o un video,
+determinada de un edificio. Para ello cuenta con dispositivo de  Adquisición , una cámara o un video,
 el cual puede detectar diferentes personas
 
 La detección de personas dentro de una imagen y el poder usar los datos del análisis de esta misma.
