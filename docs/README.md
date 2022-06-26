@@ -100,7 +100,7 @@ vector<Persona> Detector::detect(InputArray img){
 }
 
 ```
-El código para detectar una persona en una imagen se muestra a continuación:
+El código para detectar una persona en una imagen se muestra a continuación :
 
 ```c++
  int main(int argc, char** argv)
