@@ -165,8 +165,7 @@ De acuerdo a lo visto en lo implementado del codigo se pudo obtener una imagen t
 
 ![UCN](https://i.postimg.cc/zGyVkFgw/imagen-2022-06-24-161838670.png)
 ## 4. Conclusiones
-< Nuestro avances estan dirigiendose de una forma un poco lenta a nuestra meta propuesta pero se esta aprendiendo sobre la marcha el funcionamiento con la
-libreria OpenCv en C++.
+< Nuestro trabajo llego a su fin logrando cumplir lo solicitado desde un comienzo , leyendo por frames los videos.
 
 # Anexos
 
